@@ -11,7 +11,7 @@ from scripts.logger import Logger
 # Load environment variables
 load_dotenv()
 # Instance of the Logger
-logger = Logger(log_file='../data/database.log')
+logger = Logger(log_file='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/database.log')
 # Database configuration
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')

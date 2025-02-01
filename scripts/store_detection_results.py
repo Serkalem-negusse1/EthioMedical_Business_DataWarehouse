@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from logger import Logger
 
 # Initialize the logger
-logger = Logger(log_file='../data/database.log')
+logger = Logger(log_file='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/database.log')
 
 # Define the class labels
 class_labels = [
@@ -118,5 +118,5 @@ def store_detection_results(engine, detection_folder):
 # Call the functions
 if __name__ == "__main__":
     engine = connect_to_db()
-    detection_results_path = '../yolov5/runs/detect/predictions9/labels'  # Path to your labels
+    detection_results_path = 'E:/Git_repo/EthioMedical_Business_DataWarehouse/yolov5/runs/detect/predictions9/labels'  # Path to your labels
     store_detection_results(engine, detection_results_path)

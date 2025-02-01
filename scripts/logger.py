@@ -3,18 +3,7 @@ from logging.handlers import RotatingFileHandler
 
 class Logger:
     def __init__(self, log_file='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/scraper.log', max_bytes=10*1024*1024, backup_count=5):
-        """
-        Initializes the ScraperLogger with rotating file handler.
-
-        Parameters:
-        ----------
-        log_file : str
-            The name of the log file.
-        max_bytes : int
-            The maximum size of the log file in bytes before rotation.
-        backup_count : int
-            The number of backup log files to keep.
-        """
+        
         # Configure the logger
         self.logger = logging.getLogger("TelegramScraper")
         self.logger.setLevel(logging.INFO)

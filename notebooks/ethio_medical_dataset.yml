@@ -1,7 +1,7 @@
 # ethio_medical_dataset.yml
 # path: ../data
-train: ../data/train/images  # Path to the training set
-val: ../data/valid/images # Path to the validation set
+train: E:/Git_repo/EthioMedical_Business_DataWarehouse/data/train/images  
+val: E:/Git_repo/EthioMedical_Business_DataWarehouse/data/valid/images 
 
 # Classes
 nc: 8  # Number of classes

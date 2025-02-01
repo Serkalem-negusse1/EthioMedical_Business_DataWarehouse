@@ -1,7 +1,7 @@
 import os
 
 # Directory containing the images you want to rename
-directory = '../data/val/images'
+directory = 'E:/Git_repo/EthioMedical_Business_DataWarehouse/data/val/images'
 
 # Loop through each file in the directory
 for filename in os.listdir(directory):
