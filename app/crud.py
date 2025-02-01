@@ -11,4 +11,4 @@ def get_product_by_name(db: Session, product_name: str):
         return results
     except Exception as e:
         print(f"Database query error: {e}")  # Log any DB query errors
-        raise 
+        raise  
