@@ -45,16 +45,7 @@ class DataCleaner:
     ### "Handling duplicate values"
     #================================
     def remove_duplicates(self, df, image_directory):
-        """
-        Removes duplicate entries from the DataFrame and corresponding images from the specified directory.
-
-        Args:
-            df (pd.DataFrame): DataFrame from which duplicates are to be removed.
-            image_directory (str): Directory containing images corresponding to messages.
-
-        Returns:
-            pd.DataFrame: DataFrame without duplicates.
-        """
+        
         duplicates = df[df.duplicated(subset=self.ID, keep='first')]
         df = df.drop_duplicates(subset=self.ID, keep='first')
         self.logger.info(f"Duplicates removed. New shape: {df.shape}")
@@ -62,13 +53,7 @@ class DataCleaner:
         return df
 
     def _remove_duplicate_images(self, duplicates, image_directory):
-        """
-        Removes images that correspond to duplicate entries.
-
-        Args:
-            duplicates (pd.DataFrame): DataFrame containing duplicate entries.
-            image_directory (str): Directory where images are stored.
-        """
+        
         for index, row in duplicates.iterrows():
             channel_username = row[self.CHANNEL_USERNAME]
             message_id = row[self.ID]
@@ -82,16 +67,10 @@ class DataCleaner:
                 except Exception as e:
                     self.logger.error(f"Error removing image: {image_path}. Exception: {str(e)}")
 
+    ### "Handling missing values"
+    #================================
     def handle_missing_values(self, df):
-        """
-        Handles missing values in the DataFrame by filling them with placeholders.
-
-        Args:
-            df (pd.DataFrame): DataFrame in which missing values are to be handled.
-
-        Returns:
-            pd.DataFrame: DataFrame with missing values filled.
-        """
+       
         df.fillna({
             self.CHANNEL_USERNAME: 'Unknown',
             self.MESSAGE: 'N/A',
