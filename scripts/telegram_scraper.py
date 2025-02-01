@@ -8,33 +8,13 @@ from logger import Logger  # Import the logger class
 load_dotenv()
 
 class TelegramChannelScraper:
-    """
-    A class to scrape messages and media from specified Telegram channels and store them in a CSV file.
-
-    Attributes:
-    -----------
-    api_id : int
-        Telegram API ID for authentication.
-    api_hash : str
-        Telegram API Hash for authentication.
-    session_name : str
-        Session name for the Telegram client.
-    media_dir : str
-        Directory to store downloaded media files.
-    csv_file : str
-        Name of the CSV file to store scraped data.
-    channels : list
-        List of Telegram channel usernames to scrape.
-    logger : ScraperLogger
-        Logger for logging information during the scraping process.
-    """
 
     def __init__(self, api_id, api_hash, session_name, media_dir='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/photos', 
                  csv_file='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/telegram_data.csv', channels=None, log_file='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/scraper.log'):
         self.api_id = api_id
         self.api_hash = api_hash
         self.session_name = session_name
-        self.media_dir = media_dir
+        self.media_dir = media_dir 
         self.csv_file = csv_file
         self.channels = channels or []
         
@@ -45,18 +25,7 @@ class TelegramChannelScraper:
         os.makedirs(self.media_dir, exist_ok=True)
 
     async def scrape_channel(self, client, channel_username, writer):
-        """
-        Scrapes all messages from a single channel and writes to the CSV file.
-
-        Parameters:
-        ----------
-        client : TelegramClient
-            The authenticated Telegram client.
-        channel_username : str
-            The username of the channel to scrape.
-        writer : csv.writer
-            CSV writer object to write data to the CSV file.
-        """
+        
         entity = await client.get_entity(channel_username)
         channel_title = entity.title  # Extract the channel's title
         channel_id = entity.id  # Extract the channel's ID
@@ -79,19 +48,6 @@ class TelegramChannelScraper:
         """
         Downloads media from the message if available.
 
-        Parameters:
-        ----------
-        client : TelegramClient
-            The authenticated Telegram client.
-        message : telethon.tl.types.Message
-            The message object containing potential media.
-        channel_username : str
-            The username of the channel.
-
-        Returns:
-        -------
-        str or None
-            The path of the downloaded media file, or None if no media is present.
         """
         if message.media and hasattr(message.media, 'photo'):
             filename = f"{channel_username}_{message.id}.jpg"
