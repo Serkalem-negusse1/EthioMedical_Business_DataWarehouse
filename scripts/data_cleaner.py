@@ -98,18 +98,10 @@ class DataCleaner:
         self.logger.info("Formats standardized.")
         return df
 
-    ### "Handling duplicate values"
+    ### "Cleaning message contents"
     #================================
     def clean_message_content(self, text):
-        """
-        Cleans the message content by removing unwanted characters, including emojis.
-
-        Args:
-            text (str): The message content to be cleaned.
-
-        Returns:
-            str: The cleaned message content.
-        """
+        
         # Remove emojis
         text = emoji.replace_emoji(text, replace='')  # Remove emojis
         # Remove unwanted characters but keep specific patterns intact
