@@ -81,7 +81,8 @@ if __name__ == "__main__":
     # List of channels to scrape
     channels_to_scrape = [
         '@lobelia4cosmetics',
-        # Add more channels as needed
+        
+        # @DoctorsET, @YetenaWeg, @EAHCI
     ]
 
     # Specify the log file path dynamically
