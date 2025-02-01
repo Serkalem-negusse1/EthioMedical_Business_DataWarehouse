@@ -1,0 +1,10 @@
+beautifulsoup4
+pandas
+numpy
+telethon
+matplotlib
+dotenv
+pytest
+scipy
+seaborn
+emoji

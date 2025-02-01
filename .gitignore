@@ -1,0 +1,16 @@
+### AL ###
+# Exclude the following files and directories from remote repo
+mdvenv
+.env
+__pycache__/
+*.pyc
+.DS_Store
+Data/
+data/
+data.zip
+README.pdf
+logs/
+*.log
+.cometml-runs/
+yolov5/
+medical-products-1/
