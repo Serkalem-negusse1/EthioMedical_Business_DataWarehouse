@@ -5,18 +5,7 @@ import emoji
 from logger import Logger
 
 class DataCleaner:
-    """
-    A class to clean and preprocess Telegram data from a CSV file.
     
-    Attributes:
-        CHANNEL_USERNAME (str): Column name for channel usernames.
-        MESSAGE (str): Column name for messages.
-        DATE (str): Column name for dates.
-        ID (str): Column name for unique identifiers.
-        Media_path (str): Column name for media paths.
-        logger (Logger): Custom logger instance for logging messages.
-        allowed_characters (RegexPattern): Regex pattern to allow specific characters in messages.
-    """
     CHANNEL_ID = 'channel_id'
     CHANNEL_TITLE = 'channel_title'
     CHANNEL_USERNAME = 'channel_username'
