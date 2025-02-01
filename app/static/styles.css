@@ -88,7 +88,7 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background: #007BFF;
+    background: #0861c1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -97,7 +97,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #0861c1;
 }
 
 /* Results Container Styles */
@@ -121,7 +121,7 @@ th, td {
 }
 
 th {
-    background-color: #007BFF;
+    background-color: #0861c1;
     color: white;
 }
 
