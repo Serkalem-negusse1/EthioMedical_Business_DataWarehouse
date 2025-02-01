@@ -93,6 +93,6 @@ if __name__ == "__main__":
                                       session_name='E:/Git_repo/EthioMedical_Business_DataWarehouse/data/scraping_session', 
                                       channels=channels_to_scrape, log_file=log_file_path)
 
-    # Start the scraping process
+    # Start the scraping process 
     import asyncio
     asyncio.run(scraper.run())
