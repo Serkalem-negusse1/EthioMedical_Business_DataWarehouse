@@ -41,7 +41,9 @@ class DataCleaner:
         except Exception as e:
             self.logger.error(f"An error occurred while loading data: {str(e)}")
             return pd.DataFrame()
-
+    
+    ### "Handling duplicate values"
+    #================================
     def remove_duplicates(self, df, image_directory):
         """
         Removes duplicate entries from the DataFrame and corresponding images from the specified directory.
