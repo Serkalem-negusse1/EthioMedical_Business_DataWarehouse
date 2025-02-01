@@ -16,7 +16,7 @@ class TelegramChannelScraper:
         self.session_name = session_name
         self.media_dir = media_dir 
         self.csv_file = csv_file
-        self.channels = channels or []
+        self.channels = channels or [] 
         
         # Initialize the logger with a dynamic log file path
         self.logger = Logger(log_file=log_file)
