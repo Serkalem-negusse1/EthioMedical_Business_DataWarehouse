@@ -26,7 +26,7 @@ def conn():
 
     return engine  # Return the engine
 
-def store_cleaned_data(cleaned_df, table_name):
+def store_cleaned_data(cleaned_df, table_name): 
     
     engine = conn()  # Use the engine from the conn function
 
