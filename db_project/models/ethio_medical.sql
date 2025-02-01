@@ -15,4 +15,4 @@ SELECT
     date,
     media_path
 FROM source_data
-WHERE "Message" IS NOT NULL
+WHERE "Message" IS NOT NULL 
