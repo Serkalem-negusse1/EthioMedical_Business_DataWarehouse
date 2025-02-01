@@ -26,7 +26,7 @@ class TransformedProduct(Base):
     price_in_birr = Column(Integer, nullable=True)
     
     channel_id = Column(Integer, ForeignKey('transformed_channel.channel_id'))
-
+ 
     # Define back reference to TransformedChannel
     channel = relationship("Channel", back_populates="products")
 

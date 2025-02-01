@@ -87,6 +87,6 @@ def search_product(product_name: str, db: Session = Depends(get_db)):
 
     except Exception as e:
         print(f"Error: {e}")  # Log the exception
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+        raise HTTPException(status_code=500, detail="Internal Server Error") 
 
 

@@ -40,4 +40,4 @@ class Detection(BaseModel):
     id: int
     product_id: int
     confidence: float
-    image_path: str
+    image_path: str 
