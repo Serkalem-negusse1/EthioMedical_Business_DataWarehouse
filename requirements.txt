@@ -10,5 +10,6 @@ seaborn
 emoji
 
 opencv-python
-torch #torchvision
+torch 
+torchvision
 tensorflow #pytorch
