@@ -98,7 +98,7 @@ class DataCleaner:
         self.logger.info("Formats standardized.")
         return df
 
-    ### "Cleaning message contents"
+    ### "Cleaning message contents - Handling unwanted characters"
     #================================
     def clean_message_content(self, text):
         
@@ -112,15 +112,7 @@ class DataCleaner:
         return text.strip()
 
     def validate_data(self, df):
-        """
-        Validates the cleaned data for inconsistencies and removes invalid entries.
-
-        Args:
-            df (pd.DataFrame): DataFrame to validate.
-
-        Returns:
-            pd.DataFrame: Validated DataFrame with inconsistencies removed.
-        """
+        
         # Drop rows with invalid Dates
         df = df.dropna(subset=[self.DATE])
 
@@ -134,14 +126,10 @@ class DataCleaner:
         self.logger.info("Data validation completed.")
         return df
 
+    ### "Saving Cleaned Data"
+    #================================
     def save_cleaned_data(self, df, file_path):
-        """
-        Saves the cleaned data to a CSV file with standardized SQL column names.
-
-        Args:
-            df (pd.DataFrame): DataFrame containing the cleaned data.
-            file_path (str): Original path of the CSV file to determine save location.
-        """
+        
         # Define the mapping of raw column names to SQL-friendly names
         column_mapping = {
             self.CHANNEL_ID: 'channel_id',
@@ -162,16 +150,7 @@ class DataCleaner:
         self.logger.info(f"Cleaned data saved to {cleaned_file_path}.")
 
     def clean_telegram_data(self, file_path, image_directory):
-        """
-        Main function to clean Telegram data stored in a CSV file and remove corresponding duplicate images.
-
-        Args:
-            file_path (str): The path to the CSV file containing Telegram data.
-            image_directory (str): The directory path where images are stored.
-
-        Returns:
-            pd.DataFrame: A cleaned pandas DataFrame, or an empty DataFrame if cleaning fails.
-        """
+        
         try:
             # Load the data
             df = self.load_data(file_path)
