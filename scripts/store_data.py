@@ -27,13 +27,7 @@ def conn():
     return engine  # Return the engine
 
 def store_cleaned_data(cleaned_df, table_name):
-    """
-    Store the cleaned DataFrame into the specified database table.
     
-    Parameters:
-    cleaned_df (pd.DataFrame): The cleaned DataFrame to store.
-    table_name (str): The name of the table where data will be stored.
-    """
     engine = conn()  # Use the engine from the conn function
 
     try:
