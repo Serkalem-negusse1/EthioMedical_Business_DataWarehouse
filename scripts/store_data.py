@@ -42,7 +42,7 @@ def store_cleaned_data(cleaned_df, table_name):
         engine.dispose()  # Close the engine connection
 
 # Example usage
-if __name__ == '__main__':
+if __name__ == '__main__': 
     # Assuming you have a cleaned DataFrame called `cleaned_df`
     cleaned_df = pd.read_csv('E:/Git_repo/EthioMedical_Business_DataWarehouse/data/telegram_data_cleaned.csv')  # Load your cleaned data
     store_cleaned_data(cleaned_df, 'ethio_medical')  # Store it in the database
