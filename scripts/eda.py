@@ -8,7 +8,7 @@ import re
 from collections import Counter
 
 # Load dataset
-df = pd.read_csv("four_telegram_data.csv", encoding="latin1")
+df = pd.read_csv("telegram_data.csv", encoding="latin1")
 
 # Display basic info
 print("Initial Data Overview:")
@@ -65,5 +65,5 @@ plt.show()
 
 
 # Save cleaned data
-df.to_csv("cleaned_four_telegram_data.csv", index=False)
-print("Data Cleaning and EDA Completed. Cleaned data saved to 'cleaned_four_telegram_data.csv'")
+df.to_csv("cleaned_telegram_data.csv", index=False)
+print("Data Cleaning and EDA Completed. Cleaned data saved to 'cleaned_telegram_data.csv'")
