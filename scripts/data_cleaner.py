@@ -138,7 +138,7 @@ class DataCleaner:
             self.ID: 'message_id',
             self.MESSAGE: 'Message',
             self.DATE: 'date',
-            self.Media_path: 'media_path'
+            self.Media_path: 'media_path' 
         }
         
         # Rename columns in the DataFrame
