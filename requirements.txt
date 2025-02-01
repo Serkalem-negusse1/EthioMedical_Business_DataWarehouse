@@ -8,3 +8,7 @@ pytest
 scipy
 seaborn
 emoji
+
+opencv-python
+torch #torchvision
+tensorflow #pytorch
