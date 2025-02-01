@@ -79,16 +79,10 @@ class DataCleaner:
         self.logger.info("Missing values handled.")
         return df
 
+    ### "Standardize data values"
+    #================================
     def standardize_formats(self, df):
-        """
-        Standardizes the formats of specific columns in the DataFrame.
-
-        Args:
-            df (pd.DataFrame): DataFrame containing the data to be standardized.
-
-        Returns:
-            pd.DataFrame: DataFrame with standardized formats.
-        """
+        
         # Convert Date column to datetime
         if self.DATE in df.columns:
             df[self.DATE] = pd.to_datetime(df[self.DATE], errors='coerce')
@@ -104,6 +98,8 @@ class DataCleaner:
         self.logger.info("Formats standardized.")
         return df
 
+    ### "Handling duplicate values"
+    #================================
     def clean_message_content(self, text):
         """
         Cleans the message content by removing unwanted characters, including emojis.
