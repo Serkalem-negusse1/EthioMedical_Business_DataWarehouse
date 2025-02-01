@@ -14,4 +14,4 @@ SELECT DISTINCT ON (channel_id)  -- Ensure unique channel usernames
     channel_id,
     channel_username,
     channel_title  -- Rename the column to be clearer
-FROM source_data
+FROM source_data 

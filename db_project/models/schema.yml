@@ -17,7 +17,7 @@ models:
       - name: channel_username
         description: "The username of the channel."
         tests:
-          - not_null
+          - not_null 
           - unique
       - name: channel_title
         description: "The title of the channel."

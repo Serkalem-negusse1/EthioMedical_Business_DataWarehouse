@@ -13,3 +13,4 @@ SELECT
     message_id,
     media_path AS image_path  -- Rename the column to be clearer
 FROM source_data
+ 

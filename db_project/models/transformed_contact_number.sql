@@ -12,4 +12,4 @@ WITH source_data AS (
 SELECT DISTINCT ON (channel_id)  -- Ensure unique channel usernames
     channel_id,
     contact_phone_numbers  -- Rename the column to be clearer
-FROM source_data
+FROM source_data 

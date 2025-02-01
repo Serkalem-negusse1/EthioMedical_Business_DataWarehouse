@@ -15,4 +15,4 @@ SELECT   -- Ensure unique channel usernames
     product_id,
     product_name,
     price_in_birr  -- Rename the column to be clearer
-FROM source_data
+FROM source_data 
